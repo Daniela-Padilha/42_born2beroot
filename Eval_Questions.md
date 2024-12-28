@@ -73,12 +73,54 @@ The key difference between SUDO and ```su``` is that with SUDO, after 5 minutes 
 
 With ```su```, the account stays active until the user switches or logs out, which can pose a security risk.
 
-## 10. SSH
+## 10. Pass policies
+```passwd_tries=3``` --> maximum number of tries to insert correct pass.
+
+```badpass_message="error message"``` --> message showned in case of wrong pass.
+
+```logfile="/var/log/sudo/sudo_config"``` --> archive where all sudo commands are registered.
+
+```log_input, log_output``` --> register input and output of sudo commands.
+
+```iolog_dir="/var/log/sudo"``` --> directory where all sudo commands are registered.
+
+```requiretty``` --> activate the mode TTY, which limits the use of sudo in scripts.
+
+```secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"``` --> restricts the 
+directories that can be used by sudo.
+
+
+```PASS_MAX_DAYS 30``` --> The maximum days until pass expiration.
+
+```PASS_MIN_DAYS 2``` --> The minimum days until pass change.
+
+```PASS_WARN_AGE 7``` --> The days until pass warning message.
+
+
+```minlen=10``` --> minimum length of the pass (10 char).
+
+```retry=3``` --> maximum number of tries to insert correct pass.
+
+```ucredit=-1``` --> it has to have one uppercase char.
+
+```dcredit=-1``` --> it has to have one digit.
+
+```lcredit=-1``` --> it has to have one lowercase char.
+
+```maxrepeat=3``` --> maximum number of equal consecutive char.
+
+```reject_username``` --> it restricts the use of the username in the pass.
+
+```difok=7``` --> at least seven diferent characters from the last password.
+
+```enforce_for_root``` --> implement this password policy to root.
+
+## 11. SSH
 SSH (Secure Shell) is a network cryptography protocol that encrypts all communications between a client and a server.
 
 This enables secure access and remote management of computers over a network.
 
-## 11. Crontab
+## 12. Crontab
 Crontab (from the Greek god of time, Chronos) is a manager for background processes.
 
 It allows you to schedule tasks to automate the execution of commands or scripts at specific time intervals.
