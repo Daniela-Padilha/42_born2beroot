@@ -1,7 +1,7 @@
 ## 1. Does your VM have a graphical interface (GUI)?
 ```ls /usr/bin/*session```
 
-Answer: if the output only shows: ```/usr/bin/dbus-run-session``` it means you don't have a GUI.
+Answer: if the output only shows: ```/usr/bin/dbus-run-session```, it means you don't have a GUI.
 
 ## 2. Is UFW active?
 ```sudo service ufw status```
@@ -18,7 +18,7 @@ Answer: you should see "status: active" written in green in the output.
 
 uname -v --> unix name version
 
-Answer: it should display Debian or Rocky.
+Answer: it should display either Debian or Rocky.
 
 ## 5. Is the user in the right groups?
 ```getent group sudo```
@@ -32,12 +32,12 @@ Answer: username.
 ## 6. Create a new user and pass
 ```sudo adduser newuser```
 
-Answer: password upadted successfully.
+Answer: password updated successfully.
 
-## 7. Create a new group named evaluating.
+## 7. Create a new group named "evaluating".
 ```sudo addgroup evaluating```
 
-Answer: Done.
+Answer: done.
 
 ## 8. Add newuser to evaluating group
 ```sudo adduser newuser evaluating```
@@ -67,19 +67,19 @@ Answer: new hostname.
 
 lsblk --> list block devices
 
-Answer: equal to the subject.
+Answer: matches the subject.
 
 ## 12. Is SUDO active?
 ```which sudo```
 
-## 13. Newuser in SUDO group
+## 13. New user in SUDO group
 ```sudo adduser newuser sudo```
 
 ```getent group sudo```
 
 Answer: newuser.
 
-## 14. Rules for password implementation
+## 14. See rules for password implementation
 ```vim /etc/sudoers.d/sudo_config```
 
 ```vim /etc/login.defs```
@@ -95,19 +95,19 @@ Answer: newuser.
 
 ```cat sudo_config```
 
-Answer: it has at least 1 file and the command log using sudo.
+Answer: it should have at least one file and the command log using sudo.
 
-## 16. UFW
+## 16. Is UFW active?
 ```sudo service ufw status```
 
 Answer: active.
 
-## 17. UFW rules
+## 17. See UFW rules
 ```sudo ufw status numbered```
 
 Answer: 4242.
 
-## 18. New UFW rule and delete it
+## 18. Create new UFW rule and delete it
 ```sudo ufw allow 8080```
 
 ```sudo ufw status numbered```
@@ -118,15 +118,15 @@ Answer: 4242.
 
 ```sudo ufw delete rule_numbered```
 
-## 19. SSH active, and only open to 4242 port?
+## 19. Is SSH active, and only open to 4242 port?
 ```sudo service ssh status```
 
-Answer: active and server listening on: port 4242.
+Answer: active and server listening on port 4242.
 
 ## 20. Connect to SSH with the newuser
 ```hostname -I```
 
-Change to terminal of physical machine.
+Change to terminal of the physical machine.
 
 ```ssh newuser@IP -p 4242```
 
@@ -134,17 +134,17 @@ Change to terminal of physical machine.
 
 Do the same with the root@IP.
 
-Answer: With the root it should not have permissions, with the newuser it should connect.
+Answer: With the root, it should not have permissions. With newuser, it should connect.
 
 ## 21. Change Crontab script from 10 min to 1 min
 ```sudo crontab -u root -e```
 
-And change from 10 to 1.
+And change the interval from 10 to 1.
 
 ## 22. Stop the script
 ```sudo /etc/init.d/cron stop```
 
-Answer: stoping cron.
+Answer: stopping cron.
 
 ## 23. Restarting the script
 ```sudo /etc/init.d/cron start```
