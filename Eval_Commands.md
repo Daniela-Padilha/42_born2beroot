@@ -1,3 +1,6 @@
+# Important
+This is not a tutorial on how to do the project Born2beRoot, but a mere explanation of the commands and concepts to be known during evaluation.
+
 ## 1. Does your VM have a graphical interface (GUI)?
 ```ls /usr/bin/*session```
 
