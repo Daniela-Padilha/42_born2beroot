@@ -1,62 +1,82 @@
 ## 1. Clone your VM
-Open the VM VirtualBox Manager, click on your VM with a rigth mouse click and choose Clone.
-Select your Clone and start it.
-This is were you are going to do the evaluation, never start your original VM after you have submitted your project.
-If you do your signature.txt will no longer coincide with the one on your original VM.
+Open the VM VirtualBox Manager,  right-click on your VM, and choose "Clone".
+
+Select your cloned VM and start it.
+
+This is where you will perform the evaluation. Never start your original VM after you have submitted your project.
+
+If you do, your ```signature.txt``` will no longer match the one on your original VM.
 
 ## 2. Compare the signatures
-In your pshisycal machine's terminal write:
+In your physical machine's terminal type:
+
 ``` shasum vmname.vdi ```
 
-It will generate your machine's signature in the terminal.
-Then clone your repository, and open the .txt file.
-The easiest approach is to copy the signature from the terminal, do a ctrl+f in the .txt file and paste the signature.
-It will check if it is a correct match with the original one inside the .txt file.
+This will generate your machine's signature in the terminal.
+Then, clone your repository and open the ```.txt``` file.
+
+The easiest approach is to copy the signature from the terminal, press ```Ctrl+F``` in the ```.txt``` file, and paste the signature.
+
+This will check if it matches the original signature inside the ```.txt``` file.
+
 
 ## 3. What is a VM and why is it usefull?
-A Virtual Machine (VM) is a software that simulates an operative system (OS) and executes programs like a real machine. 
-It allows the creation of severall different OS from one single phisycal hardware system, having an independent environment from the OS of the physical machine.
-This is great to perform tests in a safe way. And it also brings finnancial benefits for companies.
+A Virtual Machine (VM) is software that simulates an operating system (OS) and executes programs like a real machine.
+
+It allows the creation of several different OS environments on a single physical hardware system, providing an independent environment from the OS of the physical machine.
+
+This is great for performing tests safely. It also provides financial benefits for companies.
+
 
 ## 4. Why did you choose Debian? Or Why did you choose Rocky?
-Debian is easier for learners as it requires very little administration. It is also more stable and it offers a bigger support community.
-Rocky is more enterprise oriented, it ir more regularly updated, which allows access to more recent software. 
-Rocky uses SELinux which is more flexible and robust then AppArmor.
-Rocky also uses dnf which is also more flexible and efficient then apt.
+Debian is easier for learners as it requires minimal administration. It is also more stable and has a larger support community.
+
+Rocky is more enterprise-oriented and is updated more regularly, allowing access to more recent software.
+
+Rocky uses SELinux, which is more flexible and robust than AppArmor.
+
+Rocky also uses ```dnf```, which is more flexible and efficient than ```apt```.
 
 ## 5. Apt Vs Aptitude
-Apt is a package management tool, it comeas as default in Linux, and it doens't have graphycal interface.
-Aptitude is an improved version of apt, it has graphycal interface and it allows resolution of package conflicts, is richer in functionalities.
+Apt is a package management tool that comes by default in Linux. It does not have a graphical interface.
+
+Aptitude is an improved version of Apt, with a graphical interface. It also allows the resolution of package conflicts and offers more functionality.
 
 ## 6. AppArmor
-Its a linux security model (LSM) from kernel that allows the admin to restrict the permissions and capabilities of programs.
-Trought the creation of profiles of enforcement or complain.
-Complain mode: only registers the violation attempts.
-Enforcement mode: registers and imposes the rules set to the profile.
+AppArmor is a Linux Security Module (LSM) in the kernel that allows the admin to restrict the permissions and capabilities of programs.
 
-Ps: Kernel it's a central component of the OS of most machines.
+This is done through the creation of profiles in either enforcement or complain mode.
+
+Complain mode: only registers violation attempts.
+
+Enforcement mode: registers and enforces the rules set in the profile.
+
+Note: The kernel is a central component of the OS in most machines.
 
 ## 7 LVM
-Its a logical volume manager. It provides tools to create virtual block devices from physical devices.
-It's more flexible than the conventional partition schemes for volume storage. Memory manager.
+LVM (Logical Volume Manager) is a tool that provides virtual block devices from physical devices.
+
+It is more flexible than traditional partition schemes for volume storage and works as a memory manager.
 
 ## 8. UFW
-Firewall management tool. Uncomplicated firewall (UFW) allows you to control and monitor incoming and outgoing network traffic.
-It decides if it allows or blocks specific traffic based on the safety rules applied.
+UFW (Uncomplicated Firewall) is a firewall management tool that allows you to control and monitor incoming and outgoing network traffic.
+
+It decides whether to allow or block specific traffic based on the security rules applied.
 
 ## 9. SUDO
-Substitute user do (SUDO).
-SUDO basically does the same that the su (select user) command does, it allows you to change user into root, using a password.
-The big difference is that with SUDO after 5 min of inactivity it will prompt you again for a password.
-With su the account stays active until the user changes it again, which can be risky in terms of security.
+SUDO (Substitute User Do) is a command that allows you to execute commands with the privileges of another user, usually the root user, by entering a password.
+
+The key difference between SUDO and ```su``` is that with SUDO, after 5 minutes of inactivity, it will prompt you for the password again.
+
+With ```su```, the account stays active until the user switches or logs out, which can pose a security risk.
 
 ## 10. SSH
-Secure shell (SSH).
-It's a network cryptography protocol, that encrypts every communication between a client and a server.
-This allows safe access and remote management of computers trought a network.
+SSH (Secure Shell) is a network cryptography protocol that encrypts all communications between a client and a server.
+
+This enables secure access and remote management of computers over a network.
 
 ## 11. Crontab
-Chronos (the greek god of time) table.
-It's a manager of background processes. 
-It allows you to schedule a task that automates the execution of commands or scripts in a time interval.
+Crontab (from the Greek god of time, Chronos) is a manager for background processes.
+
+It allows you to schedule tasks to automate the execution of commands or scripts at specific time intervals.
 
