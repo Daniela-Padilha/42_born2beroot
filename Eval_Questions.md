@@ -7,6 +7,7 @@ If you do your signature.txt will no longer coincide with the one on your origin
 ## 2. Compare the signatures
 In your pshisycal machine's terminal write:
 ``` shasum vmname.vdi ```
+
 It will generate your machine's signature in the terminal.
 Then clone your repository, and open the .txt file.
 The easiest approach is to copy the signature from the terminal, do a ctrl+f in the .txt file and paste the signature.
